@@ -1,6 +1,6 @@
 package com.hard.integrationTests.controllers;
 
-import com.hard.config.MvcConfig;
+import com.hard.config.AppConfig;
 import com.hard.models.Entity;
 import com.hard.utils.TestUtil;
 import org.junit.Before;
@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
         classes = {
-                MvcConfig.class,
+                AppConfig.class,
         }
 )
 @WebAppConfiguration

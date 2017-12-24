@@ -1,6 +1,6 @@
 package com.hard.unitTests.services;
 
-import com.hard.config.MvcConfig;
+import com.hard.config.AppConfig;
 import com.hard.dao.EntityDao;
 import com.hard.models.Entity;
 import com.hard.services.impl.EntityServiceImpl;
@@ -24,7 +24,7 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
         classes = {
-                MvcConfig.class,
+                AppConfig.class,
         }
 )
 @WebAppConfiguration

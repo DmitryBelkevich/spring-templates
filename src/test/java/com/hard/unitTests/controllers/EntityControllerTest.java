@@ -1,6 +1,6 @@
 package com.hard.unitTests.controllers;
 
-import com.hard.config.MvcConfig;
+import com.hard.config.AppConfig;
 import com.hard.controllers.EntityController;
 import com.hard.models.Entity;
 import com.hard.services.EntityService;
@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
         classes = {
-                MvcConfig.class,
+                AppConfig.class,
         }
 )
 @WebAppConfiguration

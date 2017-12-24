@@ -1,6 +1,6 @@
 package com.hard.integrationTests.dao;
 
-import com.hard.config.MvcConfig;
+import com.hard.config.AppConfig;
 import com.hard.dao.EntityDao;
 import com.hard.models.Entity;
 import org.junit.Assert;
@@ -20,7 +20,7 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
         classes = {
-                MvcConfig.class,
+                AppConfig.class,
         }
 )
 @WebAppConfiguration
