@@ -1,4 +1,4 @@
-package com.hard.controllers.integrationTests;
+package com.hard.integrationTests.controllers;
 
 import org.junit.Before;
 import org.junit.Test;
