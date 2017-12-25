@@ -47,6 +47,16 @@ public class EntityControllerTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
+    @Test
+    public void main_Test() throws Exception {
+        mockMvc.perform(
+                get("/api/entities")
+        )
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+        ;
+    }
+
     /**
      * get all
      */
