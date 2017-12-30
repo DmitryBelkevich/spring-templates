@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"com.hard.controllers"})
+@ComponentScan("com.hard.controllers")
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
 }
