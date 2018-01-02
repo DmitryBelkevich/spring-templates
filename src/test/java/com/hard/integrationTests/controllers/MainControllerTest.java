@@ -39,8 +39,8 @@ public class MainControllerTest {
                 get("/")
         )
                 .andExpect(status().isOk())
-                .andExpect(view().name("main"))
-                .andExpect(forwardedUrl("/WEB-INF/views/main.jsp"))
+                .andExpect(view().name("main/main"))
+                .andExpect(forwardedUrl("/WEB-INF/views/main/main.jsp"))
         ;
     }
 }

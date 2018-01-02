@@ -9,6 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
     @GetMapping(value = "")
     public String main() {
-        return "main";
+        return "main/main";
+    }
+
+    @GetMapping(value = "/admin")
+    public String admin() {
+        return "main/admin";
+    }
+
+    @GetMapping(value = "/db")
+    public String db() {
+        return "main/db";
     }
 }
