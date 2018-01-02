@@ -1,6 +1,6 @@
 package com.hard.integrationTests.controllers;
 
-import com.hard.config.MvcConfig;
+import com.hard.config.core.MvcConfig;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.hard.config;
+package com.hard.config.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"com.hard"})
+@ComponentScan("com.hard.controllers")
 public class MvcConfig extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver() {
