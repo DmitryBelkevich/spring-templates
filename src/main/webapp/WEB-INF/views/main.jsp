@@ -5,5 +5,8 @@
 </head>
 <body>
 <h1>Hello World</h1>
+<form method="POST" action="logout">
+    <input type="submit" value="logout" />
+</form>
 </body>
 </html>
