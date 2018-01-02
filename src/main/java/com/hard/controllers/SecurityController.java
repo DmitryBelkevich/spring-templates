@@ -21,4 +21,6 @@ public class SecurityController {
     public String technicalError() {
         return "security/technical_error";
     }
+
+    // TODO - registration
 }
