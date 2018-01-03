@@ -11,7 +11,8 @@ public class Role {
     private long id;
 
     @Column(name = "title")
-    private String title;
+    @Enumerated(EnumType.STRING)
+    private RoleList title;
 
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
@@ -28,11 +29,11 @@ public class Role {
         this.id = id;
     }
 
-    public String getTitle() {
+    public RoleList getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(RoleList title) {
         this.title = title;
     }
 

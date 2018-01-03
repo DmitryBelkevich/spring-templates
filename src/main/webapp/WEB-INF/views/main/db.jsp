@@ -6,7 +6,7 @@
 <body>
 <h1>Database</h1>
 <form method="POST" action="logout">
-    <input type="submit" value="logout" />
+    <input type="submit" value="logout"/>
 </form>
 </body>
 </html>

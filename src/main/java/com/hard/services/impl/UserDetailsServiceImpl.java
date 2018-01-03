@@ -1,6 +1,7 @@
 package com.hard.services.impl;
 
 import com.hard.models.Role;
+import com.hard.models.RoleList;
 import com.hard.models.User;
 import com.hard.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +33,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         Collection<Role> roles = user.getRoles();
 
         for (Role role : roles) {
-            String title = role.getTitle();
-            GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(title);
+            RoleList title = role.getTitle();
+            GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(title.name());
             grantedAuthorities.add(grantedAuthority);
         }
 
