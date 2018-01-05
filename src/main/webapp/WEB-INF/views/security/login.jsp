@@ -4,6 +4,7 @@
     <title>Title</title>
 </head>
 <body>
+
 <p><font color="green">You have been logged out</font></p>
 <h1>Login with Username and Password</h1>
 <form action="/security/login" method="POST">
@@ -23,6 +24,8 @@
         </tbody>
     </table>
 </form>
+
+<a href="/security/registration">registration</a>
 
 </body>
 </html>
