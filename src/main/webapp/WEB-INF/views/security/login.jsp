@@ -21,6 +21,9 @@
         <tr>
             <td colspan="2"><input name="submit" type="submit" value="Login"></td>
         </tr>
+        <tr>
+            <td><input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /></td>
+        </tr>
         </tbody>
     </table>
 </form>

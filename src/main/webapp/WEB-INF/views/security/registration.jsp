@@ -9,6 +9,7 @@
 <form action="/security/registration" method="POST">
     <input name="username" type="text">
     <input name="password" type="password">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 
     <button type="submit">Submit</button>
 </form>

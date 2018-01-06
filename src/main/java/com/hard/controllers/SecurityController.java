@@ -40,7 +40,7 @@ public class SecurityController {
     }
 
     @PostMapping(value = "/registration")
-    public String registration2(@ModelAttribute("user") User user) {
+    public String registration(@ModelAttribute("user") User user) {
         // TODO - registration
         // validation
 

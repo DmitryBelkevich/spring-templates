@@ -7,6 +7,7 @@
 <h1>Hello World</h1>
 <form method="POST" action="logout">
     <input type="submit" value="logout"/>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 </form>
 </body>
 </html>
