@@ -36,4 +36,19 @@ public class SecurityServiceImpl implements SecurityService {
             securityContext.setAuthentication(authenticationToken);
         }
     }
+
+    @Override
+    public String getCurrentLoggedInUsername() {
+        SecurityContext securityContext = SecurityContextHolder.getContext();
+        Authentication authentication = securityContext.getAuthentication();
+
+        Object userDetails = authentication.getPrincipal();
+
+        if (userDetails instanceof UserDetails) {
+            String username = ((UserDetails) userDetails).getUsername();
+            return username;
+        }
+
+        return null;
+    }
 }
