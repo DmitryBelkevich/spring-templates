@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
         value = {
-                "file:src/main/webapp/WEB-INF/config/mvc.xml",
+                "file:src/main/webapp/WEB-INF/config/mvc-config.xml",
         }
 )
 @WebAppConfiguration
