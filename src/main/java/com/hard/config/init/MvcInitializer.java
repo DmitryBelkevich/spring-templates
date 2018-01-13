@@ -1,25 +1,26 @@
 package com.hard.config.init;
 
 import com.hard.config.MvcConfig;
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 
-public class MvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
-    }
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
 
+public class MvcInitializer implements WebApplicationInitializer {
     @Override
-    protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{
-                MvcConfig.class,
-        };
-    }
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
 
-    @Override
-    protected String[] getServletMappings() {
-        return new String[]{
-                "/",
-        };
+        applicationContext.register(MvcConfig.class);
+
+        servletContext.addListener(new ContextLoaderListener(applicationContext));
+
+        ServletRegistration.Dynamic servletRegistration = servletContext.addServlet("dispatcherServlet", new DispatcherServlet(applicationContext));
+        servletRegistration.addMapping("/");
+        servletRegistration.setLoadOnStartup(1);
     }
 }
