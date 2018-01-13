@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan({
         "com.hard.config",
         "com.hard.repositories",
-        "com.hard.services",
+        "com.hard.services.impl",
 })
 @EnableJpaRepositories("com.hard.repositories")
 @EnableTransactionManagement
