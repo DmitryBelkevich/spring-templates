@@ -1,4 +1,4 @@
-package com.hard.config.core;
+package com.hard.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

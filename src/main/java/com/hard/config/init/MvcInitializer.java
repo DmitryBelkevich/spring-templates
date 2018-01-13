@@ -1,14 +1,14 @@
 package com.hard.config.init;
 
-import com.hard.config.core.MvcConfig;
-import com.hard.config.security.SecurityConfig;
+import com.hard.config.MvcConfig;
+import com.hard.config.SecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
-
+                SecurityConfig.class,
         };
     }
 
@@ -16,7 +16,6 @@ public class MvcInitializer extends AbstractAnnotationConfigDispatcherServletIni
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{
                 MvcConfig.class,
-                SecurityConfig.class,
         };
     }
 
