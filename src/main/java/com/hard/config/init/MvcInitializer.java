@@ -8,7 +8,7 @@ import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletRegistration;
 import java.io.File;
 
-public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{

@@ -1,4 +1,4 @@
-package com.hard.config;
+package com.hard.config.app;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

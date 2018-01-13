@@ -6,9 +6,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan({
-        "com.hard.services",
+        "com.hard.config.app",
         "com.hard.dao",
-        "com.hard.config",
+        "com.hard.services.impl",
 })
 @EnableTransactionManagement
 //@Proxy
