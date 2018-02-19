@@ -11,6 +11,9 @@
     <packaging>war</packaging>
 
     <properties>
+        <!-- encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <!-- jdk -->
         <jdk.version>9</jdk.version>
 
@@ -60,6 +63,7 @@
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
 
